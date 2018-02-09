@@ -1,0 +1,51 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Let's try taking notes about R on R Notebook.
+
+##Anatomy of Shiny App
+library(shiny)
+library(dataset)
+ui <- fluidPage()
+
+server <- function(input, output){}
+
+shinyApp(ui=ui, server=server)
+
+##UI
+###fluidPage(): 
+1. rows and columns
+2. automatically scale with the device on which the app is opened
+
+####sidebarLayout()
+the layout with a sidebar: sidebarPanel() and mainPanel()
+
+#####selectInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+choices = c("human readable title" = "variable_name",...)
+selected = "initial display"
+
+#####sliderInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+min = minimal value
+max = maximal value
+value = initial value
+
+#####xxxOutput()
+correspond to the renderXxx() function called in server function
+outputId = "internal usage for code to refer"
+
+##Server
+###function(input, output)
+####renderXxx()
+correspond to the xxxOutput() function called in UI
+input$_inputId_
+output$_outputId_
+
+##Shiny app
+###shinyApp()
+combine UI and Server
