@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "Shiny Notebook: basic concept"
 output: html_notebook
 ---
 
@@ -22,18 +22,10 @@ shinyApp(ui=ui, server=server)
 ####sidebarLayout()
 the layout with a sidebar: sidebarPanel() and mainPanel()
 
-#####selectInput()
+#####xxxInput()
 inputId = "internal usage for code to refer"
 label = "external usage for user to view"
-choices = c("human readable title" = "variable_name",...)
-selected = "initial display"
-
-#####sliderInput()
-inputId = "internal usage for code to refer"
-label = "external usage for user to view"
-min = minimal value
-max = maximal value
-value = initial value
+finally, initial value is specified
 
 #####xxxOutput()
 correspond to the renderXxx() function called in server function
