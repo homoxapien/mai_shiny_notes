@@ -1,0 +1,126 @@
+---
+title: "Shiny Notebook: input and ouput"
+output: html_notebook
+---
+###xxxInput()
+
+####function list:
+
+#####selectInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+choices = c("human readable title" = "variable_name",...)
+selected = "initial display"
+
+#####sliderInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+min = minimal value
+max = maximal value
+value = initial value
+
+#####checkboxInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+value = initial value [TRUE,FALSE]
+
+#####checkboxGroupInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+choices = c("human readable title" = "variable_name",...)
+selected = "initial display"
+
+#####dateInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+min = minimal value
+max = maximal value
+value = initial value
+
+#####dateRangeInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+min = minimal date 
+max = maximal date 
+start = initial value for start date
+end = initial value for end date
+startview = ["year","month",...]
+
+#####numericInput()
+inputId = "internal usage for code to refer"
+label = "external usage for user to view"
+min = minimal value
+max = maximal value
+value = initial value
+
+####HTML()
+migrate the console output to the browser
+it can also be used in the server function then linked with htmlOutput() in UI
+####br()
+break for individual seperation
+####radioButtons()
+####actionButton()
+####downloadButton()
+####downloadLink()
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+###xxxOutput()
+
+####function list:
+
+#####plotOutput()
+outputId = "internal usage for code to refer"
+brush = "internal usage for code to refer to samples selected via brushing"
+hover = "internal usage for code to refer to samples selected via hovering"
+
+#####dataTableOutput()
+outputId = "internal usage for code to refer"
+
+#####textOutput()
+outputId = "internal usage for code to refer"
+
+######verbatimTextOutput()
+outputId = "internal usage for code to refer"
+
+#####htmlOutput() or uiOutput()
+outputId = "internal usage for code to refer"
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+###renderXxx()
+
+####function list:
+
+#####renderPlot()
+{reactive expression},
+other arguements
+
+#####renderDataTable()
+{reactive expression},
+other arguements
+
+#####renderText()
+{reactive expression},
+other arguements
+
+######renderPrint()
+{reactive expression},
+other arguements
+
+#####renderUI()
+{reactive expression, including HTML()},
+other arguements
+
+####req()
+wait for user's input
+
+####other arguements:
+striped = [TRUE,FALSE],
+spacing = ["l","m","s"],
+align = "lccr",
+digits = (#how many decimal digits),
+width = "percentage of the width occupied",
+caption = "bottom notes"
+
+####downloadHandler()
+filename = function(){get the string of path} 
+content = function(file){write the file for downloading}
