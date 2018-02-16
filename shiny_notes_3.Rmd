@@ -1,0 +1,37 @@
+---
+title: "Shiny Notebook: reactive objects"
+output: html_notebook
+---
+
+##Reactive Source
+###reactiveValues()
+####xxxInput()
+input$*
+
+##Reactive Endpoint
+###observe()
+####xxxOutput()
+output$*
+
+##Reactive Conductor
+###reactive expression
+####reactive()
+{reactive expression with input$inputId}
+evaluated when input changed
+called with __parenthesis__ at the end and with no argument in it
+
+- - - - - - - - - - - - - - - - - - - - - - 
+##Isolating reaction
+###isolate({reactive object})
+
+##Triggering reaction
+###observeEvent(EventExpr, HandlerExpr)
+given EventExpr(expression/reactive df) is (true/updated), run HandlerExpr
+perform an action in response to an event
+
+##Delaying reaction
+###eventReactive(EventExpr, HandlerExpr)
+given EventExpr(expression/reactive df) is (true/updated), run HandlerExpr
+re-calculate a value that only updates in response to an event
+called with __parenthesis__ at the end and with no argument in it
+"ignoreNULL = FALSE" for initialization
