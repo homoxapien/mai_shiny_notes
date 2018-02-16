@@ -1,0 +1,27 @@
+---
+title: "Shiny Notebook: user interface"
+output: html_notebook
+---
+
+##HTML tags
+On the basis, the ui part a shiny app is pure html. 
+So it's acceptable to write html in ui.
+Shiny also contains a mapping table between html tags and R elements.
+e.g. <h4>"..."</h4> --> tags$h4("...") or h4("...")
+
+##Panel
+titlePanel("my title in the page", windowTitle="my title for the window")
+conditionalPanel(condition="condition statements in JavaScript", stuff to do)
+###Tabs
+####tabsetPanel(): horizontal tab list
+tabsetPanel(type="tabs", tabPanel(title="my tab title for tab #1", ...),
+                         tabPanel(title="my tab title for tab #2", ...))
+
+####navlistPanel(): vertical tab list
+navlistPanel(tabPanel(title="my tab title for tab #1", ...),
+             tabPanel(title="my tab title for tab #2", ...))
+
+##Theme
+library(shinythemes)
+themeSelector()
+theme = shinytheme("theme_name")
