@@ -6,8 +6,11 @@ output: html_notebook
 Let's try taking notes about R on R Notebook.
 
 ##Anatomy of Shiny App
+
 library(shiny)
+
 library(dataset)
+
 ui <- fluidPage()
 
 server <- function(input, output){}
@@ -15,29 +18,43 @@ server <- function(input, output){}
 shinyApp(ui=ui, server=server)
 
 ##UI
+
 ###fluidPage(): 
 1. rows and columns
 2. automatically scale with the device on which the app is opened
 
 ####sidebarLayout()
+
 the layout with a sidebar: sidebarPanel() and mainPanel()
 
 #####xxxInput()
+
 inputId = "internal usage for code to refer"
+
 label = "external usage for user to view"
+
 finally, initial value is specified
 
 #####xxxOutput()
+
 correspond to the renderXxx() function called in server function
+
 outputId = "internal usage for code to refer"
 
 ##Server
+
 ###function(input, output)
+
 ####renderXxx()
+
 correspond to the xxxOutput() function called in UI
+
 input$_inputId_
+
 output$_outputId_
 
 ##Shiny app
+
 ###shinyApp()
+
 combine UI and Server
